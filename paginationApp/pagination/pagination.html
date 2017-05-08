@@ -1,0 +1,26 @@
+<div class="paginationDiv">
+    <div class="loading" ng-show="showLoading">
+        <span>加载中</span>
+    </div>
+    <div class="shade" ng-show="showLoading"></div>
+    <div class="pagination" ng-show='hasData'>
+        <button class="pagination_first" ng-click="toPage(1)">{{conf.indexTxt}}</button>
+        <button class="pagination_previous" ng-class="{'disabled':curr<=1}" ng-disabled="curr<=1" ng-click="toPage(curr-1)">&nbsp;</button>
+        <button class="pagination_{{i}}" ng-class="{'active':curr==i}" ng-repeat="i in currList" ng-click="toPage(i)">{{i}}</button>
+        <button class="pagination_next" ng-class="{'disabled':curr>=totalPage}" ng-disabled="curr>=totalPage" ng-click="toPage(curr+1)">&nbsp;</button>
+        <button class="pagination_last" ng-click="toPage(totalPage)">{{conf.lastTxt}}</button>
+        <div class="select_num" ng-show="conf.hasSel">
+            <ul class="pagination_sel" ng-class='{true:"show",false:"hide"}[onclk]'>  
+                <li class="pagination_sel_opt" ng-repeat="i in conf.selNumList" ng-class="{'isSeled':i==pagination.pageNum}" ng-blur='paginationSel()' ng-click='selPageNum(i)' title='{{i}}条'>{{i}}条</li> 
+            </ul> 
+            <input class='pagination_sel_val hide' ng-class='{true:"show",false:"hide"}[onclk]' ng-click='paginationSel()' value='{{pagination.pageNum}}条' readonly></input>
+        </div>
+        <span>跳至
+            <input class="pagination_curr" ng-model='currInput' ng-keydown="toKeyPage(currInput)">
+            /&nbsp;
+            <span class="pagination_total">{{totalPage}}</span>
+            页
+        </span>
+        <button class="pagination_jump" ng-click="toPage(currInput)">跳转</button>
+    </div>
+</div>

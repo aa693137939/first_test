@@ -1,0 +1,64 @@
+@charset('UTF-8');
+.btn{
+	box-sizing: border-box;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	letter-spacing: 0;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 2px;
+	border: 1px solid #3896F8;
+	background-color: #3896f8;
+	text-align: center;
+	color: #fff;
+	padding: 0;
+}
+.btn-l{
+	width: 150px;
+	height: 38px;
+}
+.btn-m{
+	width: 120px;
+	height: 32px;
+}
+.btn-s{
+	width: 96px;
+	height: 32px;
+}
+.btn:hover{
+	background-color: #41abf6;
+	border: 1px solid #41abf6;
+}
+.btn:active,.btn.active{
+	background-color: #197ADF;
+	border: 1px solid #197ADF;
+}
+.btn.disabled,.btn:disabled,
+.btn.disabled:hover,.btn:disabled:hover,
+.btn.disabled:active,.btn:disabled:active{
+	background-color: #A1CEFE;
+	border: 1px solid #A1CEFE;
+	cursor: not-allowed;
+}
+.btn-sec{
+	border: 1px solid #3896F8;
+	background-color: #fff;
+	color: #3896F8;
+}
+.btn-sec:hover{
+	border: 1px solid #41ABF5;
+	background-color: rgba(65,170,245,0.15);
+}
+.btn-sec:active,.btn-sec.active{
+	background-color: #197ADF;
+	color: #fff;
+	border: 1px solid #197ADF;
+}
+.btn-sec.disabled,.btn-sec:disabled,
+.btn-sec.disabled:hover,.btn-sec:disabled:hover,
+.btn-sec.disabled:active,.btn-sec:disabled:active{
+	border: 1px solid #B7DAFE;
+	background-color: #fff;
+	color: #D2D2D2;
+	cursor: not-allowed;
+}
